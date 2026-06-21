@@ -1,0 +1,60 @@
+Question 1: Linux Environment Verification
+
+1. Username and Groups
+
+Command: whoami
+
+Output:
+coder
+
+Observation:
+The command displays the current logged-in username.
+
+Command: groups
+
+Output:
+coder
+
+Observation:
+The command displays all groups associated with the current user account.
+
+2. Current Shell
+
+Command: echo $SHELL
+
+Output:
+/bin/bash
+
+Observation:
+This command shows the shell currently being used.
+
+3. Current Working Directory
+
+Command: pwd
+
+Output:
+/home/coder/project/learn
+
+Observation:
+This command displays the present working directory.
+
+4. Files and Directories in Workspace
+
+Command: ls -la
+
+Output:
+studentFile.c
+a.out
+
+Observation:
+This command lists all files and directories present in the workspace, including hidden files.
+
+5. Network Connectivity Verification
+
+Command: ping -c 4 google.com
+
+Observation:
+The command verifies internet connectivity by sending packets to Google and receiving responses.
+
+Result:
+Linux environment verified successfully.
