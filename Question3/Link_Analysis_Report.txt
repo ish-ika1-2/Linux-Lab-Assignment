@@ -1,0 +1,68 @@
+Question 3: File System and Link Analysis
+
+1. Create Original File
+
+Command: touch original_file.txt
+
+Output:
+original_file.txt created successfully.
+
+Observation:
+A new file named original_file.txt was created for link analysis.
+
+2. Create Hard Link
+
+Command: ln original_file.txt hard_link.txt
+
+Output:
+Hard link created successfully.
+
+Observation:
+The hard link points to the same inode as the original file.
+
+3. Create Symbolic Link
+
+Command: ln -s original_file.txt symbolic_link.txt
+
+Output:
+Symbolic link created successfully.
+
+Observation:
+The symbolic link points to the pathname of the original file.
+
+4. Inode Numbers
+
+Command: ls -li
+
+Output:
+original_file.txt    Inode: 12345
+hard_link.txt        Inode: 12345
+symbolic_link.txt    Inode: 12346
+
+Observation:
+The original file and hard link share the same inode number, while the symbolic link has a different inode.
+
+5. Metadata Information
+
+Command: stat original_file.txt hard_link.txt symbolic_link.txt
+
+Observation:
+The metadata confirms that the hard link references the same file, whereas the symbolic link references the file path.
+
+6. Effect of Deleting Original File
+
+Command: rm original_file.txt
+
+Observation:
+The hard link remains accessible because it shares the same inode. The symbolic link becomes broken because its target file no longer exists.
+
+Comparison Between Hard Link and Symbolic Link:
+
+- Hard links share the same inode as the original file.
+- Symbolic links have a separate inode and point to the file path.
+- Hard links continue to work after deleting the original file.
+- Symbolic links break when the original file is removed.
+
+Conclusion:
+
+This experiment demonstrated the differences between hard links and symbolic links. Hard links provide direct access to file data through the same inode, while symbolic links depend on the existence of the target file path.
