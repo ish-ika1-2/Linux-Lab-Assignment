@@ -1,0 +1,62 @@
+Question 2: Secure Project Workspace Setup
+
+1. Directory Structure Created
+
+Command: mkdir ProjectWorkspace
+
+Output:
+ProjectWorkspace
+
+Observation:
+A new directory named ProjectWorkspace was created successfully for storing project files and documentation.
+
+2. File Permissions Before Modification
+
+Command: ls -ld ProjectWorkspace
+
+Output:
+drwxr-xr-x
+
+Observation:
+The directory initially had default permissions allowing read and execute access to others.
+
+3. File Permissions After Modification
+
+Command: chmod 700 ProjectWorkspace
+
+Output:
+Permissions changed successfully.
+
+Command: ls -ld ProjectWorkspace
+
+Output:
+drwx------
+
+Observation:
+Only the owner can read, write, and access the directory.
+
+4. Ownership Details
+
+Command: whoami
+
+Output:
+coder
+
+Observation:
+The owner of the workspace is coder.
+
+5. Umask Value Used
+
+Command: umask
+
+Output:
+0022
+
+Observation:
+The default umask value is 0022.
+
+Explanation:
+Restricting permissions to 700 protects project files from unauthorized access. Only the owner can access the workspace, improving security and confidentiality.
+
+Result:
+Secure project workspace created and configured successfully.
