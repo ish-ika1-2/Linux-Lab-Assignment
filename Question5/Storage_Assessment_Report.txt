@@ -1,0 +1,49 @@
+Question 5: Storage Health Assessment and Documentation
+
+1. Available Storage Devices
+
+Command: lsblk
+
+Observation:
+The command displays all available storage devices and their partitions.
+
+2. Mounted File Systems
+
+Command: df -h
+
+Observation:
+The command shows mounted file systems and their disk usage in human-readable format.
+
+3. Disk Usage Statistics
+
+Command: du -sh .
+
+Observation:
+The command displays the total size of the current directory.
+
+4. Inode Utilization
+
+Command: df -i
+
+Observation:
+The command shows inode usage and availability for all mounted file systems.
+
+5. Storage Health Observations
+
+Observation:
+The storage devices are functioning normally and have sufficient free space available.
+
+6. Recommendations
+
+- Regularly monitor disk usage.
+- Remove unnecessary files.
+- Maintain adequate free space.
+- Monitor inode utilization.
+- Perform regular backups.
+
+Conclusion:
+
+Storage resources were successfully assessed. The system has adequate storage capacity and healthy filesystem utilization.
+
+Result:
+Storage assessment completed successfully.
